@@ -1,23 +1,23 @@
+---
+// Importem el css de tailwind
+import "../styles/global.css";
+import Header from "../components/common/Header.astro";
+---
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="h-full">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+	<link rel="icon" href="/favicon.ico"/>
+	<meta name="generator" content={Astro.generator}/>
+	<title>Astro Basics</title>
+</head>
+<body class="min-h-screen flex flex-col bg-black text-white m-0 p-0">
+<Header/>
+<!-- flex-1 obliga al slot (donde vive tu main) a expandirse y llenar todo el espacio restante -->
+<div class="flex-1 flex flex-col">
+	<slot/>
+</div>
+</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

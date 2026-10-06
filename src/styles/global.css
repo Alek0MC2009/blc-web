@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "m5x7";
+    src: url("../../public/fonts/font-text.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "title";
+    src: url("../../public/fonts/font-title.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@theme {
+    --color-blc-red: #FF0000;
+    --font-game: "m5x7", sans-serif;
+    --font-title: "title", sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}

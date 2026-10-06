@@ -1,0 +1,7 @@
+---
+const {class: className } = Astro.props;
+---
+<div class={`bg-black border-8 border-blc-red font-game ${className ? className : ""}`}>
+    <!-- Aceptamos hijos-->
+    <slot />
+</div>

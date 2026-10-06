@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GameBox from "../components/common/GameBox.astro";
+---
+
+<Layout>
+	<main class="h-screen w-full bg-black text-white font-game flex flex-col items-center justify-center text-center px-6">
+		<div class="w-96">
+			<h1 class="text-9xl text-blc-red mb-6">
+				404
+			</h1>
+
+			<h2 class="text-8xl mb-4">
+				YOU'RE <span class="text-blc-red">LOST</span>.
+			</h2>
+
+			<p class="text-3xl text-gray-400 max-w-xl mb-10">
+				This page doesn't exist.
+				<br/>
+				Maybe you shouldn't be here.
+			</p>
+			<GameBox class="hover:border-yellow-300 hover:ease-out transition-all duration-300 font-title text-blc-red hover:text-yellow-300 cursor-pointer">
+				<a href="/" class="text-4xl">
+					Return
+				</a>
+			</GameBox>
+
+		</div>
+	</main>
+</Layout>
