@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import GameBox from "../components/common/GameBox.astro";
+import AudioPlayer from "../components/common/AudioPlayer.astro";
 ---
 
-<Layout>
+<Layout title="rm_notfound">
+	<AudioPlayer audioRoute="/audio/mus_notfound.ogg" />
 	<main class="h-screen w-full bg-black text-white font-game flex flex-col items-center justify-center text-center px-6">
 		<div class="w-96">
 			<h1 class="text-9xl text-blc-red mb-6">
@@ -19,7 +21,8 @@ import GameBox from "../components/common/GameBox.astro";
 				<br/>
 				Maybe you shouldn't be here.
 			</p>
-			<GameBox class="hover:border-yellow-300 hover:ease-out transition-all duration-300 font-title text-blc-red hover:text-yellow-300 cursor-pointer">
+			<GameBox
+					class="hover:border-yellow-300 hover:ease-out transition-all duration-300 font-title text-blc-red hover:text-yellow-300 cursor-pointer">
 				<a href="/" class="text-4xl">
 					Return
 				</a>
@@ -27,4 +30,7 @@ import GameBox from "../components/common/GameBox.astro";
 
 		</div>
 	</main>
+	<script>
+		
+	</script>
 </Layout>

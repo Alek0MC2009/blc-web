@@ -1,0 +1,22 @@
+---
+const { audioRoute } = Astro.props;
+---
+
+<audio
+		id="audio-player"
+		src={audioRoute}
+		preload="auto"
+		loop
+></audio>
+
+<script>
+    const audioPlayer = document.getElementById('audio-player');
+
+    if (audioPlayer instanceof HTMLAudioElement) {
+        audioPlayer.volume = 0.4;
+
+        void audioPlayer.play().catch(() => {
+            console.log('Autoplay blocked by the browser.');
+        });
+    }
+</script>

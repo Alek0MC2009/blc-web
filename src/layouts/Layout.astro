@@ -1,23 +1,32 @@
 ---
-// Importem el css de tailwind
+/* Importem el CSS de Tailwind */
 import "../styles/global.css";
 import Header from "../components/common/Header.astro";
+
+// Obtenim la propietat 'title' amb un valor per defecte
+const { title = "Default Title" } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en" class="h-full">
 <head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-	<link rel="icon" href="/favicon.ico"/>
-	<meta name="generator" content={Astro.generator}/>
-	<title>Astro Basics</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link
+		rel="icon"
+		href="/imgs/bloody-logo.png"
+		type="image/png"
+	/>
+	<meta name="generator" content={Astro.generator} />
+	<title>{title}</title>
 </head>
+
 <body class="min-h-screen flex flex-col bg-black text-white m-0 p-0">
-<Header/>
-<!-- flex-1 obliga al slot (donde vive tu main) a expandirse y llenar todo el espacio restante -->
-<div class="flex-1 flex flex-col">
-	<slot/>
-</div>
+<Header />
+
+<!-- El slot ocupa l'espai restant de la pàgina -->
+<main class="flex-1 flex flex-col">
+	<slot />
+</main>
 </body>
 </html>

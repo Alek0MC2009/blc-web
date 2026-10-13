@@ -1,7 +1,7 @@
 ---
 const {class: className } = Astro.props;
 ---
-<div class={`bg-black border-8 border-blc-red font-game ${className ? className : ""}`}>
+<div class={`bg-black border-8 border-blc-red font-game ${className ?? ""}`}>
     <!-- Aceptamos hijos-->
     <slot />
 </div>

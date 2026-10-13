@@ -1,0 +1,14 @@
+---
+const side = Astro.props.side ?? 'left';
+const imgPath = side === 'left'
+    ? '/imgs/chapter1_text_left.webp'
+    : '/imgs/chapter1_text_right.webp';
+---
+
+<div class={`absolute inset-x-0 top-40 bottom-0 flex ${side === 'left' ? 'justify-start' : 'justify-end'} pointer-events-none box-border p-8`}>
+	<img
+			src={imgPath}
+			alt="Side Image"
+			class="h-[80vh] max-h-full object-contain"
+	/>
+</div>
